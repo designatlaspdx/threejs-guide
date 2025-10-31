@@ -34,7 +34,7 @@ window.addEventListener('resize', () => {
 //Camera
 
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 1000);
-camera.position.z = 5;
+camera.position.z = 15;
 scene.add(camera);
 
 //Geometry
@@ -55,7 +55,7 @@ renderer.render(scene, camera);
 function animate() {
     requestAnimationFrame(animate);
 
-    mesh.rotation.x += 0.01;
+    mesh.rotation.x += 0.03;
     mesh.rotation.y += 0.01;
 
     renderer.render(scene, camera);
